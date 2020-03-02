@@ -1,12 +1,17 @@
 class GoogleService
+  # attr_reader :connection
   def initialize(location)
     @location = location
   end
 
   def connection
-    Faraday.new(url: 'https://maps.googleapis.com/maps/api/geocode/json?address=denver+co+CA&key=AIzaSyBp0wYB9jCN3id6w635BT_FkB0NjuHjygc') do |faraday|
+    binding.pry
+    Faraday.new(url: "https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}") do |faraday|
       faraday.params['key'] = ENV['google_api']
-      binding.pry
     end
+  end
+
+  def city
+    binding.pry
   end
 end
