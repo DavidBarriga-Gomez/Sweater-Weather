@@ -1,6 +1,8 @@
-class Api::V1::ForecastsController < ApplicationController
+class Api::V1::ForecastController < ApplicationController
   def index
-    response = Faraday.new(url: "https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}") do |faraday|
-      faraday.params['key'] = ENV['google_api']
+    conn = Faraday.get(url: "https://maps.googleapis.com/maps/api/geocode/json?address=denver,co+CA&key=AIzaSyBp0wYB9jCN3id6w635BT_FkB0NjuHjygc")
+      # faraday.headers['key'] = ENV['google_api']
+      binding.pry
+    # end
   end
 end
