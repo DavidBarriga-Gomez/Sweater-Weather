@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'User can', type: :feature do
   it 'retrieve wheather for a city' do
-    # get '/api/v1/forecast?location=denver,co'
+    # visit('/forecasts')
+
+    expect(service.city).to eq('denver')
+    expect(service.state).to eq('colorado')
   end
 end

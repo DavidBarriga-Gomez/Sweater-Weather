@@ -1,5 +1,6 @@
-class Api::V1::ForecastController < ApplicationController
+class Api::V1::ForecastsController < ApplicationController
   def index
-
-  end 
+    response = Faraday.new(url: "https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}") do |faraday|
+      faraday.params['key'] = ENV['google_api']
+  end
 end
