@@ -25,7 +25,7 @@ class AntipodeFacade
   end
 
   def new_location(coordiantes)
-    GoogleService.new
     binding.pry
+    GoogleService.new.location(opposite_coordinates)
   end
 end

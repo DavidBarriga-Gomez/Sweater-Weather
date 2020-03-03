@@ -1,7 +1,7 @@
 class GoogleService
   attr_reader :city, :latitude_and_longitude
   # allows us to call ^ methods outside of scope
-  def initialize(location)
+  def initialize(location = 'denver,co')
     @location = location
   end
   # ^ instantiated with
