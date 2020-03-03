@@ -23,4 +23,9 @@ class AntipodeFacade
   def temperature
     forecast_data[:currently][:temperature]
   end
+
+  def new_location(coordiantes)
+    GoogleService.new
+    binding.pry
+  end
 end

@@ -18,6 +18,7 @@ RSpec.describe 'amypode facade' do
     expect(@facade.opposite_coordinates).to eq("-27.0,98.0")
     expect(@facade.wheater_summary).to eq('Overcast')
     expect(@facade.temperature).to eq(70.05)
+    expect(@facade.new_location(@facade.opposite_coordinates)).to eq('something')
     # expect(@facade.forecast_data).to eq('json file')
     # ^ checks that we can call methods on our returned facade
   end
