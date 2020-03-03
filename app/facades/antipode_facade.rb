@@ -25,7 +25,7 @@ class AntipodeFacade
   end
 
   def new_location(coordiantes)
-    binding.pry
-    GoogleService.new.location(opposite_coordinates)
+    response = GoogleService.new.location(opposite_coordinates)
+    json[:results].first[:formatted_address]
   end
 end
