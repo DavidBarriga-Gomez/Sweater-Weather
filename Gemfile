@@ -38,6 +38,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'pry'
+  gem 'webmock'
+  gem 'capybara'
 end
 
 group :development do
