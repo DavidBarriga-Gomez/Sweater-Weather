@@ -7,6 +7,11 @@ class AntipodeFacade
   end
 
   def opposite_coordiantes
+    AmypodeService.new(coordinates).opposite_coordiantes
+  end
 
-  end 
+  def forecast_data
+    DarkSkyService.new(coordinates).forecast_data
+    binding.pry
+  end
 end
