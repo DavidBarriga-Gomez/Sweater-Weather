@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'darksy api consumption' do
-  it 'does the thing' do
+  xit 'does the thing' do
     WebMock.disable!
     json_response = File.read('spec/fixtures/google_response.json')
     stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=#{ENV['google_api']}").
