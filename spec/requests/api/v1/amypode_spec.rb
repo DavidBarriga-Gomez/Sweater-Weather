@@ -8,7 +8,7 @@ RSpec.describe 'gives data' do
 
     expect(response).to be_successful
 
-    expec(@info['data']).to eq('something')
+    expect(@info['data']).to eq('something')
 
   end
 end
