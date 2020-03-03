@@ -3,6 +3,8 @@ class AntipodeFacade
 
   def initialize(coordinates)
     @coordinates = coordinates
+    # @coordinates = coordinates.delete("lat=ong").sub('&', ',')
+    # binding.pry
     @id = nil
   end
 
@@ -11,7 +13,7 @@ class AntipodeFacade
   end
 
   def forecast_data
-    DarkSkyService.new(coordinates).forecast_data
+    DarkSkyService.new(opposite_coordiantes).forecast_data
     binding.pry
   end
 end
