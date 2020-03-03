@@ -14,6 +14,5 @@ class DarkSkyService
   def forecast_data
     response = connection.get("/forecast/#{ENV['dark_sky_api']}/#{@coordinates}")
     json = JSON.parse(response.body, symbolize_names: true)
-    # binding.pry
   end
 end
