@@ -25,4 +25,9 @@ class GoogleService
     json = JSON.parse(response.body, symbolize_names: true)
     json[:results].first[:geometry][:location].to_s
   end
+
+  def location(coordinates)
+    response = connection.get("/maps/api/geocode/json?latlng=#{coordinates}")
+    json = JSON.parse(response.body, symbolize_name: true)
+  end
 end
