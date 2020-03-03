@@ -9,6 +9,6 @@ RSpec.describe 'amypode api consumption' do
 
     service = AmypodeService.new("lat=27&long=-82")
 
-    expect(service.opposite_coordiantes).to eq("-27.0,98.0")
+    expect(service.opposite_coordinates).to eq("-27.0,98.0")
   end
 end

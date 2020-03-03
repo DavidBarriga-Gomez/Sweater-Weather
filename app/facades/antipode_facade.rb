@@ -8,12 +8,19 @@ class AntipodeFacade
     @id = nil
   end
 
-  def opposite_coordiantes
-    AmypodeService.new(coordinates).opposite_coordiantes
+  def opposite_coordinates
+    AmypodeService.new(coordinates).opposite_coordinates
   end
 
   def forecast_data
-    DarkSkyService.new(opposite_coordiantes).forecast_data
-    binding.pry
+    DarkSkyService.new(opposite_coordinates).forecast_data
+  end
+
+  def wheater_summary
+    forecast_data[:currently][:summary]
+  end
+
+  def temperature
+    forecast_data[:currently][:temperature]
   end
 end

@@ -11,7 +11,7 @@ class AmypodeService
     json = JSON.parse(response.body, symbolize_names: true)
   end
 
-  def opposite_coordiantes
+  def opposite_coordinates
     connection[:data][:attributes].to_s.delete(":{}lat=>ong' ''")
   end
 end

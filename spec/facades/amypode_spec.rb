@@ -15,8 +15,10 @@ RSpec.describe 'amypode facade' do
     @facade = AntipodeFacade.new("lat=27&long=-82")
     # creates a facade / object / poro
 
-    expect(@facade.opposite_coordiantes).to eq("-27.0,98.0")
-    expect(@facade.forecast_data).to eq('json file')
+    expect(@facade.opposite_coordinates).to eq("-27.0,98.0")
+    expect(@facade.wheater_summary).to eq('Overcast')
+    expect(@facade.temperature).to eq(70.05)
+    # expect(@facade.forecast_data).to eq('json file')
     # ^ checks that we can call methods on our returned facade
   end
 end
