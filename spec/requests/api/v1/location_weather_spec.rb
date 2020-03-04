@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe 'Weather API' do
 
-
   before(:each) do
     json_response = File.read('spec/fixtures/denver_geocode_data.json')
     stub_request(:get, "https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GOOGLE_KEY']}&address=denver,co").
