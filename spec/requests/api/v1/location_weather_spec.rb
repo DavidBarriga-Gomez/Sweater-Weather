@@ -44,7 +44,7 @@ describe 'Weather API' do
   end
 
   it "sends current visibility" do
-    expect(@info['data']['attributes']['current']['visibility']).to eq("10 miles")
+    expect(@info['data']['attributes']['current']['visibility']).to eq("10.0 miles")
   end
 
   it "sends current uv index" do

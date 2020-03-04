@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   def create
     user = User.new(user_params.merge(api_key: SecureRandom.hex(13)))
+    # creates user adding api key, which is radomized with ^
     if user.save
       render json: UserSerializer.new(user), status: 201
     else
